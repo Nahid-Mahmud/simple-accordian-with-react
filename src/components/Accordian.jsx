@@ -7,10 +7,10 @@ const Accordian = () => {
     setSelected(id === selected ? "" : id);
   };
   return (
-    <div className="flex h-screen justify-center items-center px-2">
+    <div className="flex h-screen justify-center items-center px-2 ">
       <div className="w-full max-w-lg flex flex-col gap-2 ">
         {accordianData?.map((item) => (
-          <div key={item?.id} onClick={() => handleSingleSecection(item?.id)}>
+          <div className="cursor-pointer" key={item?.id} onClick={() => handleSingleSecection(item?.id)}>
             <div className="bg-[#153448] p-5 max-w-lg text-white rounded-md">
               <div className="flex justify-between min-w-full text-xl">
                 {item?.title} <span> {selected === item?.id ? "-" : "+"} </span>
