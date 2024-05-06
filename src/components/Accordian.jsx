@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Accordian = () => {
+const Accordion = () => {
   const [selected, setSelected] = useState("");
 
   const handleSingleSecection = (id) => {
@@ -9,7 +9,7 @@ const Accordian = () => {
   return (
     <div className="flex h-screen justify-center items-center px-2 ">
       <div className="w-full max-w-lg flex flex-col gap-2 ">
-        {accordianData?.map((item) => (
+        {accordionData?.map((item) => (
           <div className="cursor-pointer" key={item?.id} onClick={() => handleSingleSecection(item?.id)}>
             <div className="bg-[#153448] p-5 max-w-lg text-white rounded-md">
               <div className="flex justify-between min-w-full text-xl">
@@ -30,9 +30,9 @@ const Accordian = () => {
   );
 };
 
-export default Accordian;
+export default Accordion;
 
-const accordianData = [
+const accordionData = [
   {
     id: crypto.randomUUID(),
     title: "Introduction to React",
