@@ -15,7 +15,13 @@ const Accordian = () => {
               <div className="flex justify-between min-w-full text-xl">
                 {item?.title} <span> {selected === item?.id ? "-" : "+"} </span>
               </div>
-              {selected === item?.id && <div className="mt-2">{item?.content}</div>}
+              <div
+                className={`transition-all duration-500  overflow-hidden ${
+                  selected === item?.id ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                {item?.content}
+              </div>
             </div>
           </div>
         ))}
