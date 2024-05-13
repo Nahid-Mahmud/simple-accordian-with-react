@@ -17,7 +17,7 @@ const Accordion = () => {
               </div>
               <div
                 className={`transition-all duration-500  overflow-hidden ${
-                  selected === item?.id ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                  selected === item?.id ? "max-h-screen" : "max-h-0"
                 }`}
               >
                 {item?.content}
